@@ -1,8 +1,50 @@
+//Algañaras Cesar
+//Ejercicio 6
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
 
+	let edad;
+	
+	edad = document.getElementById("txtIdEdad").value;
+	edad = parseInt(edad);
 
+	if (edad >17)
+	{
+		alert("Es mayor");
+	}
+	else
+	{
+		if (edad <13)
+		{
+			alert("Es un niño")
+		}
+		else
+		{
+			alert("Es adolecente")
+		}
+		
+	}
+}
 
-}//FIN DE LA FUNCIÓN
+/*{
+
+	let edad;
+	
+	edad = document.getElementById("txtIdEdad").value;
+	edad = parseInt(edad);
+
+	if (edad >17)
+	{
+		alert("Es mayor");
+	}
+	else if (edad <13)
+		{
+			alert("Es un niño")
+		}
+		else
+		{
+			alert("Es adolecente")
+		}
+		
+	}
+}*/
