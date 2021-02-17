@@ -25,8 +25,8 @@ function mostrar()
 		if (flag == 0 || numeroIngresado < numeroMinimo)
 		{
 			numeroMinimo = numeroIngresado;
-			flag = 1;
 		}
+		flag = 1;
 		seguir = prompt("¿Desea ingresar otro numero? ingrese Si o No");
 	}
 	

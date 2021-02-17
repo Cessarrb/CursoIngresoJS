@@ -40,7 +40,8 @@ function mostrar()
 			mensaje = "Es de noche";
 			break;
 		default:
-			mensaje = "La hora no existe";								
+			mensaje = "La hora no existe";	
+			break;							
 	}
 	alert(mensaje)
 }//FIN DE LA FUNCIÓN
