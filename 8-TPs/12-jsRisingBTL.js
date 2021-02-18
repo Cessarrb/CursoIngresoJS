@@ -15,16 +15,13 @@ function ComenzarIngreso()
 	let sueldoBruto;
 	let numLegajo;
 	let nacionalidad;
-	let flag;
 
-	flag = 0;
-
-	while (flag == 0) 
-	{
 		edad = prompt("Ingrese su edad no menor a 18 y no mayor 90 años");
+		edad = parseInt(edad);
 		while (isNaN(edad)== true || edad < 18 || edad > 90)
 		{
 			edad = prompt("Edad erronea, vuelva a ingresar su edad");
+			edad = parseInt(edad);
 		}
 		sexo = prompt("Ingrese su sexo con una letra, M=masculino o F=femenino");
 		while (sexo != "M" && sexo != "F")
@@ -41,9 +38,11 @@ function ComenzarIngreso()
 				break;
 		}
 		estadoCivil = prompt("Ingrese con un numero su estado civil: 1=Solteros 2=Casados 3=Divorciados 4=Viudos");
+		estadoCivil = parseInt(estadoCivil);
 		while (isNaN(estadoCivil) == true || estadoCivil <0 || estadoCivil >4)
 		{
 			estadoCivil = prompt("Estado civil erroneo, Ingrese su estado civil: 1=Soltero/a 2=Casado/a 3=Divorciado/a 4=Viudo/a");
+			estadoCivil = parseInt(estadoCivil);
 		} 
 		switch (estadoCivil)
 		{
@@ -61,14 +60,18 @@ function ComenzarIngreso()
 				break;
 		}		
 		sueldoBruto = prompt("Ingrese su sueldo no menor a 8000");
+		sueldoBruto = parseInt(sueldoBruto);
 		while (isNaN(sueldoBruto) == true || sueldoBruto < 8000) 
 		{
 			sueldoBruto = prompt("Sueldo erroneo, ingrese su sueldo no menor a 8000");
+			sueldoBruto = parseInt(sueldoBruto);
 		}
 		numLegajo = prompt("Ingrese su numero de legajo de 4 cifras");
+		numLegajo = parseInt(numLegajo);
 		while (isNaN(numLegajo) == true || numLegajo.toString().length != 4 || numLegajo < 1000 || numLegajo > 9999) 
 		{
 			numLegajo = prompt("Lejago erroneo, ingrese su numero de legajo de 4 cifras");
+			numLegajo = parseInt(numLegajo);
 		}
 		nacionalidad = prompt("Ingrese su nacionalidad segun la letra: A=argentinos E=extranjeros N=nacionalizados");
 		while (isNaN(nacionalidad) == false || nacionalidad != "A" && nacionalidad != "E" && nacionalidad != "N")
@@ -87,8 +90,6 @@ function ComenzarIngreso()
 				nacionalidad = "Nacionalizado"
 				break;
 		}
-		flag = 1;
-	}
 
 	document.getElementById("txtIdEdad").value = edad;
 	document.getElementById("txtIdSexo").value = sexo;

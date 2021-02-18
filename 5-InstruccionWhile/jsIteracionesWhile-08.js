@@ -7,16 +7,24 @@ function mostrar()
 	let numeroIngresado;
 	let numeroPositivo;
 	let numeroNegativo;
+	let contador;
 
 	numeroPositivo = 0;
-	numeroNegativo = 1;
+	numeroNegativo = 0;
+	contador = 0;
 
 	seguir = "Si";
 
-	while ( seguir == "Si")
+	while (seguir == "Si")
 	{
 		numeroIngresado = prompt("Ingrese un numero");
 		numeroIngresado = parseInt(numeroIngresado);
+		
+		while(isNaN(numeroIngresado) == true)
+		{
+			numeroIngresado = prompt("Error, ingrese un numero");
+			numeroIngresado = parseInt(numeroIngresado);
+		}
 
 		if (numeroIngresado>0)
 		{
@@ -24,12 +32,18 @@ function mostrar()
 		}
 		else
 		{
-			numeroNegativo = numeroNegativo * numeroIngresado;
+			numeroNegativo = numeroNegativo + numeroIngresado;
+			contador = contador + 1;
 		}
 		
 		seguir = prompt("¿Desea ingresar otro numero? ingrese Si o No");
 	}
-	
+
+	if (numeroNegativo < 1)
+	{
+		numeroNegativo = numeroNegativo / contador;
+	}
+
 	document.getElementById("txtIdSuma").value = numeroPositivo;
 	document.getElementById("txtIdProducto").value = numeroNegativo;
 

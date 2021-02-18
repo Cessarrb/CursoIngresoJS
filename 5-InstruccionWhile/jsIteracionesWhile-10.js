@@ -25,12 +25,18 @@ function mostrar()
 	let promedioPositivos = 0;
 	let difereneciaNegYPos;
 
-	seguir = true;
+	seguir = "si";
 
-	while (seguir == true) 
+	while (seguir == "si") 
 	{
 		numIngresado = prompt("Ingrese un numero");
 		numIngresado = parseInt(numIngresado);
+
+		while (isNaN(numIngresado) == true)
+		{
+			numIngresado = prompt("Error, ingrese un numero")
+			numIngresado = parseInt(numIngresado);
+		}
 
 		if (numIngresado > 0) 
 		{
@@ -51,7 +57,7 @@ function mostrar()
 		{
 			cantidadNumPares = cantidadNumPares + 1
 		}
-		seguir = confirm("¿Desea ingresar otro numero? ingrese Si o No");
+		seguir = prompt("¿Desea ingresar otro numero? ingrese Si o No");
 	}
 
 	if (cantidadNegativos > 0) 
