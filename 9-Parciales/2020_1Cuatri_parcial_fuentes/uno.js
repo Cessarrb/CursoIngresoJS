@@ -10,6 +10,8 @@ b) Del tipo con mas unidades, el promedio por compra
 c) Cuántas unidades de jabones hay en total*/
 
 function mostrar() 
+
+
 {
 	let contadorProducto;
 	let tipoIngresado;
@@ -29,7 +31,6 @@ function mostrar()
 	let contadorCantidadBarbijo;
 	let contadorCantidadJabon;
 	let contadorCantidadAlcohol;
-	let mensaje;
 
 	contadorProducto = 0;
 	banderaDelPrimero = 0;
@@ -111,8 +112,6 @@ function mostrar()
 				contadorCantidadAlcohol = contadorCantidadAlcohol + cantidadIngresada;
 				contadorAlcohol = contadorAlcohol + 1;
 
-				if (tipoIngresado == "alcohol")
-				{
 					if (banderaDelPrimero == 0 || precioIngresado < precioAlcoholBarato)
 					{
 						precioAlcoholBarato = precioIngresado;
@@ -120,8 +119,7 @@ function mostrar()
 						fabricanteAlcoholBarato = fabricanteIngresado;
 						banderaDelPrimero = 1;
 					}
-				}
-				break;		
+				break;
 		}
 	}//Fin de while
 
@@ -148,10 +146,13 @@ function mostrar()
 	{
 		document.write(`El precio de alcohol mas barato es ${precioAlcoholBarato} Cantidad de unidades ${cantidadAlcoholBarato} y el fabricante es ${fabricanteAlcoholBarato}`);
 	}
-	document.write(`El producto con mayor unidades es ${mayorCantidad} y el promedio es ${promedio}`);
+	else
+	{
+		document.write(`No se ingreso el producto alcohol`);
+	}
+	document.write(`<br>El producto con mayor unidades es ${mayorCantidad} y el promedio es ${promedio}`);
 	document.write(`<br>La cantidad de unidades de jabon es ${contadorCantidadJabon}`);
 }
-
 
 
 
