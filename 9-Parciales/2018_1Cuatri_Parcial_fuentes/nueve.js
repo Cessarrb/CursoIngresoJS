@@ -51,9 +51,12 @@ function mostrar()
             pesoMax = peso;
             marcaPesada = marca;
         }
-        if (flag == 0 || peso < pesoMin) //f)
+        else
+        {
+            if (flag == 0 || peso < pesoMin) //f)
         {
             pesoMin = peso;
+        }
         }
         if (temperatura < 0) //c)
         {
