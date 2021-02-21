@@ -98,10 +98,7 @@ function mostrar()
   }
     else
     {
-      if (contadorCantidadBolsas > 30)
-      {
         descuento = acumuladorPrecioBruto - acumuladorPrecioBruto * 0.25; 
-      }
     }
   
   //d) Informar el tipo con mas cantidad de bolsas.
