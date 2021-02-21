@@ -18,9 +18,23 @@ function mostrar()
   let precioBruto;
   let descuento;
   let contadorCantidadBolsas;
+  let contadorCantidadArena;
+  let contadorCantidadCal;
+  let contadorCantidadCemento;
+  let precioMasCaro;
+  let flag;
+  let mayorCantidadBolsas;
 
+  contadorPrecioArena = 0;
+  contadorPrecioCal = 0;
+  contadorPrecioCemento = 0;
+  contadorCantidadArena = 0;
+  contadorCantidadCal = 0;
+  contadorCantidadCemento = 0;
   acumuladorPrecioBruto = 0;
+  contadorCantidadBolsas = 0;
   precioTotal = 0;
+  flag = 0;
 
   respuesta = "si";
 
@@ -48,29 +62,72 @@ function mostrar()
     }
 
     precioBruto = precioIngresado * cantidadIngresada;
-    acumuladorPrecioBruto = acumuladorPrecioBruto + precioBruto;
+    acumuladorPrecioBruto = acumuladorPrecioBruto + precioBruto; //a) El importe total a pagar , bruto sin descuento
     contadorCantidadBolsas = contadorCantidadBolsas + cantidadIngresada;
+
+    switch (tipoIngresado)
+    {
+      case "arena":
+        contadorCantidadArena = contadorCantidadArena + cantidadIngresada;
+        contadorPrecioArena = contadorPrecioArena + precioBruto;
+        break;
+      case "cal":
+        contadorCantidadCal = contadorCantidadCal + cantidadIngresada;
+        contadorPrecioCal = contadorPrecioCal + precioBruto;
+        break;
+      case "cemento":
+        contadorCantidadCemento = contadorCantidadCemento + cantidadIngresada;
+        contadorPrecioCemento = contadorPrecioCemento + precioBruto;
+        break;
+    }
+     //f) El tipo mas caro
+     if (flag == 0 || precioIngresado > precioMasCaro)
+     {
+       precioMasCaro = precioIngresado;
+       tipoMasCaro = tipoIngresado;
+       flag = 1;
+     }
 
     respuesta = prompt("Desea ingresar mas productos?");
   }
-  
-  alert(`El importe total a pagar es ${acumuladorPrecioBruto}`);
 
-  if (cantidadIngresada > 10) //b)
+  //b) el importe total a pagar con descuento(solo si corresponde)
+  if (contadorCantidadBolsas > 10 && contadorCantidadBolsas < 30) //b)
   {
-    if (cantidadIngresada < 30)
-    {
       descuento = acumuladorPrecioBruto - acumuladorPrecioBruto * 0.15;
-
-    }
+  }
     else
     {
-      if (cantidadIngresada > 30)
+      if (contadorCantidadBolsas > 30)
       {
         descuento = acumuladorPrecioBruto - acumuladorPrecioBruto * 0.25; 
       }
     }
-    alert(`Y el importe total a pagar con descuento es ${descuento}`);
+  
+  //d) Informar el tipo con mas cantidad de bolsas.
+  if (contadorCantidadArena > contadorCantidadCal && contadorCantidadArena > contadorCantidadCemento)
+  {
+    mayorCantidadBolsas = "arena";
+  }
+  else
+  {
+    if (contadorCantidadCal > contadorCantidadCemento)
+    {
+      mayorCantidadBolsas = "cal";
+    }
+    else
+    {
+      mayorCantidadBolsas = "cemento";
+    }
   }
 
+
+  document.write(`El importe total a pagar es ${acumuladorPrecioBruto}`);
+
+  if (contadorCantidadBolsas > 10)
+  {
+    document.write(`<br>El importe total a pagar con descuento es ${descuento}`);
+  }
+  document.write(`<br>El producto con mas cantidad de bolsas es ${mayorCantidadBolsas}`);
+  document.write(`<br>El tipo de producto mas caro es ${tipoMasCaro}`);
 }
