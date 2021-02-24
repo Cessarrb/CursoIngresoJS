@@ -94,11 +94,11 @@ function mostrar()
   //b) el importe total a pagar con descuento(solo si corresponde)
   if (contadorCantidadBolsas > 10 && contadorCantidadBolsas < 30) //b)
   {
-      descuento = acumuladorPrecioBruto - acumuladorPrecioBruto * 0.15;
+    descuento = acumuladorPrecioBruto - acumuladorPrecioBruto * 0.15;
   }
     else
     {
-        descuento = acumuladorPrecioBruto - acumuladorPrecioBruto * 0.25; 
+      descuento = acumuladorPrecioBruto - acumuladorPrecioBruto * 0.25; 
     }
   
   //d) Informar el tipo con mas cantidad de bolsas.
