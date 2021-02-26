@@ -5,8 +5,8 @@ function mostrar()
 {
 	let seguir;
 	let numeroIngresado;
-	let numeroMaximo;
-	let numeroMinimo;
+	let numeroMenorPar;
+	let numeroNegativoMayor;
 	let flag;
 
 	flag = 0;
@@ -17,14 +17,15 @@ function mostrar()
 		numeroIngresado = prompt("Ingrese un numero");
 		numeroIngresado = parseInt(numeroIngresado);
 
-		if (flag == 0 || numeroIngresado > numeroMaximo)
+		if (numeroIngresado%2==0)
 		{
-			numeroMaximo = numeroIngresado;
+			numeroMenorPar = numeroIngresado;
 		}
+		
 
-		if (flag == 0 || numeroIngresado < numeroMinimo)
+		if (flag == 0 || numeroIngresado < numeroMenorMayor)
 		{
-			numeroMinimo = numeroIngresado;
+			numeroMenorMayor = numeroIngresado;
 		}
 		flag = 1;
 		seguir = prompt("¿Desea ingresar otro numero? ingrese Si o No");

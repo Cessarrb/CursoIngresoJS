@@ -1,4 +1,4 @@
-//Algañaras Cesar
+//Algañaras Cesar ejercicio 3
 /*En el ingreso a un viaje en avion nos solicitan nombre , edad, sexo("f" o "m") y estado civil("soltero", "casado" o "viudo")y temperatura corporal.
 a) El nombre de la persona con mas temperatura.
 b) Cuantos mayores de edad estan viudos

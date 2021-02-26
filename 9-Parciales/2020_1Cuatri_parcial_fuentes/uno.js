@@ -1,3 +1,4 @@
+//Algañaras Cesar ejercicio 1
 /*Debemos realizar la carga de 5(cinco) productos de prevención de contagio,
 de cada una debo obtener los siguientes datos:
 el tipo (validar "barbijo" , "jabón" o "alcohol") ,

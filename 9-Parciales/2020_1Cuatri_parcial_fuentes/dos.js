@@ -1,3 +1,4 @@
+//Algañaras Cesar ejercicio 2
 /*Realizar el algoritmo que permita ingresar los datos de una compra productos de la construccion, hasta que el cliente quiera:
 Tipo validad("arena";"cal";"cemento")
 Cantidad de bolsas,
