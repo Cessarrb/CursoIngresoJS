@@ -1,19 +1,42 @@
 function mostrar()
 {
-	let contador;
-	let acumulador;
-	let numeroIngresado;
 
-	contador = 0;
-	acumulador = 0;
-	while (contador < 5)
+	while(x) 
 	{
-		numeroIngresado = prompt("Ingrese un numero");
-		numeroIngresado = parseInt(numeroIngresado);
-		contador = contador + 1;
-		acumulador = acumulador + numeroIngresado ; 
+		while()
+		{
+
+		}
+
+		while()
+		{
+
+		}
+
+		while()
+		{
+
+		}
+
+		while()
+		{
+
+		}
+
+		while()
+		{
+
+		}
 	}
-	
-	document.getElementById("txtIdSuma").value = acumulador;
-	document.getElementById("txtIdPromedio").value= acumulador / 5;
+
+
+	document.write(``);
+	document.write(`<br>`);
+	document.write(`<br>`);
+	document.write(`<br>`);
+	document.write(`<br>`);
+	document.write(`<br>`);
+	document.write(`<br>`);
+
+
 }//FIN DE LA FUNCIÓN

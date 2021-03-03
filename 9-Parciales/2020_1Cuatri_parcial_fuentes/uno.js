@@ -74,12 +74,10 @@ function mostrar() {
 			case "barbijo":
 				contadorBarbijo = contadorBarbijo + 1;
 				cantidadUnidadesBarbijo = cantidadUnidadesBarbijo + unidadIngresada;
-				promedio = cantidadUnidadesBarbijo / contadorJabon;
 				break;
 			case "jabon":
 				contadorJabon = contadorJabon + 1;
 				cantidadUnidadesJabon = cantidadUnidadesJabon + unidadIngresada; //c) Cuántas unidades de jabones hay en total
-				promedio = cantidadUnidadesJabon / contadorJabon;
 				break;
 			case "alcohol":
 
@@ -91,7 +89,6 @@ function mostrar() {
 				}
 				contadorAlcohol = contadorAlcohol + 1;
 				cantidadUnidadesAlcohol = cantidadUnidadesJabon + unidadIngresada;
-				promedio = cantidadUnidadesAlcohol / contadorAlcohol;
 				break;
 		}
 		productos = productos + 1;

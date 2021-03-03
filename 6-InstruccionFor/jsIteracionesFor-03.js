@@ -38,7 +38,7 @@ function mostrar()
 	let sumadorTemperaturaCorporalGato;
 	let sumadorTemperaturaCorporalOtraCosa;
 	let contadorPerro;
-	let contadorGato;
+	let contadorGato; //CTRL + ALT SELECCION Y DPS SHIFT + FIN
 	let contadorOtraCosa;
 	let sumadorGatosYperros;
 	let estadoEnfermo;
